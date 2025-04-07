@@ -12,7 +12,7 @@ app.post("/", async (req, res) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", // Fixed: Removed the extra dot here
     port: 587,
-    secure: process.env.NODE_ENV === "production",
+    secure:false, // process.env.NODE_ENV === "production"
     auth: {
       user: process.env.NODEMAILER_HOST_EMAIL,
       pass: process.env.NODEMAILER_HOST_PASS,
